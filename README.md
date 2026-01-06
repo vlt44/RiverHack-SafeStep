@@ -2,11 +2,7 @@
 
 ## Business Context
 
-As a Major Metropolitan Area, Austin Texas is home to nearly a million residents making it the 10th largest U.S. city. We are acutely aware of the needs of visually impaired residents and visitors here for leisure or business. As a City, we prioritize their safety as a fundamental responsibility and keep our growing city accessible to all.
-
-To this end, we are developing SafeStep to assist all in navigating busy urban intersections. This App will use the latest in C-V2X technology to communicate with other vehicles. This networking standard is well understood by existing automotive systems and allows both oncoming vehicles and pedestrians to be aware of each other–reducing accidents. SafeStep makes signalized crossings safe, convenient, and easy.
-
-This app will leverage the best resources we are privileged with by our status as the Tech Capital of Texas and foster the development of further pedestrian aids to allow our local businesses to grow even further. 
+Austin is a rapidly growing city with dense traffic and increasingly complex intersections. For pedestrians, knowing when it is safe to cross can be unclear and stressful. SafeStep is a mobile app designed to notify users when it is safe to cross signalized intersections, helping reduce uncertainty, improve timing, and make city navigation safer and more accessible.
 
 
 ## User Story
