@@ -19,12 +19,6 @@ Austin is a rapidly growing city with dense traffic and increasingly complex int
 
 **Smart Infrastructure:** Enhance the safety and accessibility of Austin's public spaces and transportation systems
 
-## Tracks
-
-- Austin Community Engagement Track
-- Community Choice Awards 
-
-
 
 ## Technologies
 
