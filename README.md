@@ -7,10 +7,11 @@ Austin is a rapidly growing city with dense traffic and increasingly complex int
 
 ## User Story
 
-_As a_ visually impaired person  
-_I want_ to be aware of vehicle traffic  
-_So That_ I can safely cross at traffic intersections
+**_As a_** pedestrian
 
+**_I want_** to be notified when it is safe to cross an intersection 
+
+**_So That_** I can cross streets confidently and avoid oncoming traffic.
 
 ## Challenge Area
 
