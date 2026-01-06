@@ -34,7 +34,8 @@ Austin is a rapidly growing city with dense traffic and increasingly complex int
   * Alert crossing status  
     * Stop  
     * Walk 
-    * Warning  
+    * Warning
+* Notify Intersection to signal to cross
  
 ## Group
 
