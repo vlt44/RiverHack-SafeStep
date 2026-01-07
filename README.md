@@ -22,6 +22,7 @@ Austin is a rapidly growing city with dense traffic and increasingly complex int
 
 - React Native
 - Typescript
+- Elixir
 
 ## System Design
 
