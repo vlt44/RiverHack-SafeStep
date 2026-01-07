@@ -140,6 +140,24 @@ Austin is a rapidly growing city with dense traffic and increasingly complex int
 
 ### Flow chart
 
+**User Flow**
+![UserFlow](./SafeStep/assets/Charts/UserFlow.png)
+
+**Crossing Status State**
+![Crossing Status State](./SafeStep/assets/Charts/CrossingStatusState.png)
+
+**Sequence Polling**
+![Sequence Polling](./SafeStep/assets/Charts/SequencePolling.png)
+
+**Sequence Realtime Streaming**
+![Sequence Realtime Streaming](./SafeStep/assets/Charts/SequenceRealtimeStreaming.png)
+
+**Signal Handling**
+![Signal Handling](./SafeStep/assets/Charts/SignalHandling.png)
+
+**Backend Processing Event-Driven**
+![Backend Processing Event Driven](./SafeStep/assets/Charts/BackendProcessingEventDriven.png)
+
 ## Group
 
 - Alex
