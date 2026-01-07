@@ -23,17 +23,6 @@ Austin is a rapidly growing city with dense traffic and increasingly complex int
 - React Native
 - Typescript
 
-## Minimum Viable Product (MVP)
-
-- Get user geolocation
-- Get nearest intersection(s)
-- Get Current intersection crossing status
-  - Alert crossing status
-    - Stop
-    - Walk
-    - Warning
-- Notify Intersection to signal to cross
-
 ## System Design
 
 Functional requirements (MVP)
