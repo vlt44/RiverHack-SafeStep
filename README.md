@@ -25,21 +25,23 @@ Austin is a rapidly growing city with dense traffic and increasingly complex int
 
 ## System Design
 
-### Functional requirements (MVP)
+### Requirements
+
+**Functional (MVP)**
 
 - Users should be able to set their current intersection by searching or choosing from a nearby list.
 - Users can view the current crossing status for the selected intersection (`STOP`, `WALK`, `WARNING`, or `UNKNOWN`).
 - Users will receive an in-app alert when the crossing status changes.
 - Users will see the crossing status refresh automatically while they are actively using the app at an intersection.
 
-### Functional requirements (Next)
+**Functional (Next)**
 
 - Users should be able to detect intersections automatically when they arrive near one (geofence).
 - Users can use destination mode to follow a route and automatically advance to the next intersection.
 - Users should be able to save favorite intersections and quickly return to them.
 - Users will see a safe fallback state when signal data is unavailable (e.g., UNKNOWN + “Use caution”).
 
-### Non-functional requirements
+**Non-functional**
 
 - Latency: status changes should reach user quickly (goal: < 1–2s once received)
 - Reliability: tolerate dropped network; retry with backoff
@@ -49,7 +51,7 @@ Austin is a rapidly growing city with dense traffic and increasingly complex int
 
 ### Core entities
 
-#### Intersection
+**Intersection**
 
 - `id`
 - `name` (e.g., “Congress Ave & 6th St”)
@@ -59,14 +61,14 @@ Austin is a rapidly growing city with dense traffic and increasingly complex int
 - `isActive`
 - `createdAt`
 
-#### CrossingSignalState
+**CrossingSignalState**
 
 - `intersectionId`
 - `status` → `STOP | WALK | WARNING | UNKNOWN`
 - `effectiveAt` (timestamp)
 - `expiresAt` (optional)
 
-#### Device
+**Device**
 
 - `id`
 - `userId` (nullable)
@@ -74,7 +76,7 @@ Austin is a rapidly growing city with dense traffic and increasingly complex int
 - `pushToken`
 - `createdAt`
 
-#### Subscription
+**Subscription**
 
 - `id`
 - `deviceId`
@@ -82,7 +84,7 @@ Austin is a rapidly growing city with dense traffic and increasingly complex int
 - `isActive`
 - `createdAt`
 
-#### DataSource
+**DataSource**
 
 - `id`
 - `name` (e.g., “City of Austin Traffic Signals”)
@@ -91,20 +93,20 @@ Austin is a rapidly growing city with dense traffic and increasingly complex int
 - `isActive`
 - `lastHeartbeatAt`
 
-#### AgencyIntersectionMap
+**AgencyIntersectionMap**
 
 - `dataSourceId`
 - `agencyIntersectionId`
 - `safeStepIntersectionId`
 
-#### RawSignalEvent
+**RawSignalEvent**
 
 - `id`
 - `dataSourceId`
 - `payload`
 - `receivedAt`
 
-#### NormalizedSignalEvent
+**NormalizedSignalEvent**
 
 - `intersectionId`
 - `normalizedStatus` (`STOP | WALK | WARNING | UNKNOWN`)
