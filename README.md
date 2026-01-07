@@ -141,7 +141,8 @@ Austin is a rapidly growing city with dense traffic and increasingly complex int
 ### Flow chart
 
 **User Flow**
-![UserFlow](./SafeStep/assets/Charts/UserFlow.png)
+
+<img src="./SafeStep/assets/Charts/UserFlow.png" height="1000" />
 
 **Crossing Status State**
 ![Crossing Status State](./SafeStep/assets/Charts/CrossingStatusState.png)
@@ -157,6 +158,8 @@ Austin is a rapidly growing city with dense traffic and increasingly complex int
 
 **Backend Processing Event-Driven**
 ![Backend Processing Event Driven](./SafeStep/assets/Charts/BackendProcessingEventDriven.png)
+
+## Demo
 
 ## Group
 
