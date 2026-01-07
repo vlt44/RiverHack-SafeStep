@@ -28,7 +28,7 @@ Austin is a rapidly growing city with dense traffic and increasingly complex int
 ### Functional requirements (MVP)
 
 - Users should be able to set their current intersection by searching or choosing from a nearby list.
-- Users can view the current crossing status for the selected intersection (STOP, WALK, WARNING, or UNKNOWN).
+- Users can view the current crossing status for the selected intersection (`STOP`, `WALK`, `WARNING`, or `UNKNOWN`).
 - Users will receive an in-app alert when the crossing status changes.
 - Users will see the crossing status refresh automatically while they are actively using the app at an intersection.
 
