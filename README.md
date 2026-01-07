@@ -155,7 +155,8 @@ Austin is a rapidly growing city with dense traffic and increasingly complex int
 ![Sequence Realtime Streaming](./SafeStep/assets/Charts/SequenceRealtimeStreaming.png)
 
 **Signal Handling**
-![Signal Handling](./SafeStep/assets/Charts/SignalHandling.png)
+
+<img src="./SafeStep/assets/Charts/SignalHandling.png" height="1000" />
 
 **Backend Processing Event-Driven**
 ![Backend Processing Event Driven](./SafeStep/assets/Charts/BackendProcessingEventDriven.png)
