@@ -161,6 +161,102 @@ Austin is a rapidly growing city with dense traffic and increasingly complex int
 **Backend Processing Event-Driven**
 ![Backend Processing Event Driven](./SafeStep/assets/Charts/BackendProcessingEventDriven.png)
 
+## UI
+
+### Color System
+
+**Status Colors (Non-negotiable semantics)**
+
+> These follow global traffic conventions and ISO / MUTCD human-factors standards.
+
+| Status      | Color Name   | Hex       | Meaning               |
+| ----------- | ------------ | --------- | --------------------- |
+| **WALK**    | Safety Green | `#2E7D32` | Safe / go             |
+| **WARNING** | Amber        | `#F9A825` | Caution / ending soon |
+| **STOP**    | Signal Red   | `#C62828` | Do not cross          |
+| **UNKNOWN** | Neutral Gray | `#616161` | Data unavailable      |
+
+**Accessibility Requirements (Critical)**
+
+> WCAG 2.1 AA minimum contrast: 4.5:1 for body text
+> 3:1 for large text (18pt+ or bold 14pt+)
+
+| Background        | Text Color | Contrast |
+| ----------------- | ---------- | -------- |
+| `#2E7D32` (Green) | `#FFFFFF`  | 5.7:1    |
+| `#F9A825` (Amber) | `#000000`  | 12.6:1   |
+| `#C62828` (Red)   | `#FFFFFF`  | 5.9:1    |
+| `#616161` (Gray)  | `#FFFFFF`  | 7.3:1    |
+
+**Base UI Colors**
+| Role | Color | Hex |
+| -------------- | ------------ | --------- |
+| Background | Off White | `#FAFAFA` |
+| Surface / Card | White | `#FFFFFF` |
+| Primary Text | Almost Black | `#1C1C1C` |
+| Secondary Text | Mid Gray | `#5F6368` |
+| Divider | Light Gray | `#E0E0E0` |
+
+**Action Colors**
+| Action | Color | Hex |
+| ---------------- | ---------- | --------- |
+| Primary Action | Blue | `#1565C0` |
+| Secondary Action | Gray | `#9E9E9E` |
+| Disabled | Light Gray | `#BDBDBD` |
+
+**Notification & Feedback Colors**
+| Use | Color | Hex |
+| -------------- | ----- | --------- |
+| Success | Green | `#2E7D32` |
+| Error | Red | `#D32F2F` |
+| Warning banner | Amber | `#F9A825` |
+| Info | Blue | `#1976D2` |
+
+**Color + Shape Redundancy**
+
+> WCAG requirement
+
+| Status  | Icon                |
+| ------- | ------------------- |
+| WALK    | ✓ or walking person |
+| WARNING | ⚠️                  |
+| STOP    | ⛔                  |
+| UNKNOWN | ?                   |
+
+**Status Card**
+
+### WALK state
+
+- Background: `#2E7D32`
+- Text: `#FFFFFF`
+- Icon: ✓
+- Label: **WALK**
+- Subtext: “Safe to cross”
+
+### WARNING state
+
+- Background: `#F9A825`
+- Text: `#000000`
+- Icon: ⚠️
+- Label: **WARNING**
+- Subtext: “Crossing ending soon”
+
+### STOP state
+
+- Background: `#C62828`
+- Text: `#FFFFFF`
+- Icon: ⛔
+- Label: **STOP**
+- Subtext: “Do not cross”
+
+### UNKNOWN state
+
+- Background: `#616161`
+- Text: `#FFFFFF`
+- Icon: ?
+- Label: **UNKNOWN**
+- Subtext: “Data unavailable — use caution”
+
 ## Demo
 
 ## Group
