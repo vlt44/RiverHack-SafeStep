@@ -115,6 +115,29 @@ Austin is a rapidly growing city with dense traffic and increasingly complex int
 
 ### APIs
 
+**Intersections**
+
+- `GET /intersections/nearby`
+- `GET /intersections/search`
+- `GET /intersections/{intersectionId}/signal`
+
+**Devices**
+
+- `POST /devices/register`
+
+**Subscriptions**
+
+- `POST /subscriptions`
+- `DELETE /subscriptions/{subscriptionId}`
+
+**Internal – City Feed Ingestion**
+
+- `POST /internal/feeds/{dataSourceId}/events`
+
+**Realtime Updates**
+
+- `GET /stream/intersections/{intersectionId}` _(realtime instead of polling)_
+
 ### Flow chart
 
 ## Group
