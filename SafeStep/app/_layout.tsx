@@ -1,23 +1,13 @@
-
 import { View } from 'react-native';
-import CrossButton from './Components/CrossButton';
-import IntersectionInfo from './Components/IntersectionInfo';
+import mockData from "./MockData/mock.json";
+import Navbar from './Components/Navbar';
+import IntersectionDisplay from './Components/IntersectionDisplay';
 
 export default function HomeScreen() {
   return (
-    <View 
-    style={{
-      flex: 1,
-      justifyContent: "center",
-      alignItems: "center",
-      position: "relative",
-      backgroundColor: "#f7B500",
-    }}
-    >
-      <IntersectionInfo/>
-      <CrossButton 
-        onPress={() => console.log('CrossButton pressed')}
-      />
+    <View>
+      <Navbar />
+      <IntersectionDisplay data={mockData} />
     </View>
   )
 }
