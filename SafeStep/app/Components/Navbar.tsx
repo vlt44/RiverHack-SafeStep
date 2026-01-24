@@ -3,7 +3,7 @@ import React from "react";
 export default function Navbar() {
   return (
     <div style={NavbarContainerStyle}>
-      <h1 style={navbarTitleStyle}>SafeStep</h1>
+      <div style={navbarTitleStyle}>SafeStep</div>
     </div>
   );
 }
