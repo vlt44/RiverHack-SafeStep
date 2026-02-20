@@ -30,16 +30,16 @@ Austin is a rapidly growing city with dense traffic and increasingly complex int
 **Functional (MVP)**
 
 - Users should be able to set their current intersection by searching or choosing from a nearby list.
-- Users can view the current crossing status for the selected intersection (`STOP`, `WALK`, `WARNING`, or `UNKNOWN`).
+- Users can view the current crossing status for the selected intersection.
 - Users will receive an in-app alert when the crossing status changes.
 - Users will see the crossing status refresh automatically while they are actively using the app at an intersection.
 
 **Functional (Next)**
 
-- Users should be able to detect intersections automatically when they arrive near one (geofence).
+- Users should be able to detect intersections automatically when they arrive near one.
 - Users can use destination mode to follow a route and automatically advance to the next intersection.
 - Users should be able to save favorite intersections and quickly return to them.
-- Users will see a safe fallback state when signal data is unavailable (e.g., UNKNOWN + “Use caution”).
+- Users will see a safe fallback state when signal data is unavailable.
 
 **Non-functional**
 
@@ -76,43 +76,6 @@ Austin is a rapidly growing city with dense traffic and increasingly complex int
 - `pushToken`
 - `createdAt`
 
-**Subscription**
-
-- `id`
-- `deviceId`
-- `intersectionId`
-- `isActive`
-- `createdAt`
-
-**DataSource**
-
-- `id`
-- `name` (e.g., “City of Austin Traffic Signals”)
-- `type` (`CITY_FEED`)
-- `format` (e.g., `SPaT`, `NTCIP`, `JSON`)
-- `isActive`
-- `lastHeartbeatAt`
-
-**AgencyIntersectionMap**
-
-- `dataSourceId`
-- `agencyIntersectionId`
-- `safeStepIntersectionId`
-
-**RawSignalEvent**
-
-- `id`
-- `dataSourceId`
-- `payload`
-- `receivedAt`
-
-**NormalizedSignalEvent**
-
-- `intersectionId`
-- `normalizedStatus` (`STOP | WALK | WARNING | UNKNOWN`)
-- `effectiveAt`
-- `sourceEventId`
-
 ### APIs
 
 **Intersections**
@@ -125,19 +88,6 @@ Austin is a rapidly growing city with dense traffic and increasingly complex int
 
 - `POST /devices/register`
 
-**Subscriptions**
-
-- `POST /subscriptions`
-- `DELETE /subscriptions/{subscriptionId}`
-
-**Internal – City Feed Ingestion**
-
-- `POST /internal/feeds/{dataSourceId}/events`
-
-**Realtime Updates**
-
-- `GET /stream/intersections/{intersectionId}` _(realtime instead of polling)_
-
 ### Flow chart
 
 **User Flow**
@@ -146,19 +96,6 @@ Austin is a rapidly growing city with dense traffic and increasingly complex int
 
 **Crossing Status State**
 ![Crossing Status State](./SafeStep/assets/Charts/CrossingStatusState.png)
-
-**Sequence Polling**
-![Sequence Polling](./SafeStep/assets/Charts/SequencePolling.png)
-
-**Sequence Realtime Streaming**
-![Sequence Realtime Streaming](./SafeStep/assets/Charts/SequenceRealtimeStreaming.png)
-
-**Signal Handling**
-
-<img src="./SafeStep/assets/Charts/SignalHandling.png" height="1000" />
-
-**Backend Processing Event-Driven**
-![Backend Processing Event Driven](./SafeStep/assets/Charts/BackendProcessingEventDriven.png)
 
 ## UI
 
