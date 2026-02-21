@@ -1,21 +1,24 @@
 import React from "react";
+import { View, Text, StyleSheet } from "react-native";
 
 export default function Navbar() {
   return (
-    <div style={NavbarStyling}>
-      SafeStep
-    </div>
+    <View style={styles.container}>
+      <Text style={styles.title}>SafeStep</Text>
+    </View>
   );
 }
 
-const NavbarStyling = {
-  width: '100%',
-  height: '60px',
-  backgroundColor: '#000000',
-  display: 'flex',
-  justifyContent: 'center',
-  alignItems: 'center',
-  color: '#FFFFFF',
-  margin: 0,
-  fontSize: '24px',
-}
+const styles = StyleSheet.create({
+  container: {
+    width: '100%',
+    height: 60,
+    backgroundColor: '#000000',
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  title: {
+    color: '#FFFFFF',
+    fontSize: 24,
+  },
+});
