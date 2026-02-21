@@ -1,6 +1,6 @@
 import { CrossingSignalStatus } from './signalStates';
 
-export interface Intersection {
+export default interface Intersection {
   id: string,
   name: string,
   signalStatus: CrossingSignalStatus
