@@ -1,38 +1,48 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import { View, Text, StyleSheet } from 'react-native';
-import { SIGNAL_STATES } from '../Utils/signalStates';
+import { SIGNAL_STATES } from '../utils/signalStates';
 
-export default function IntersectionDisplay() {  
+
+export default function IntersectionDisplay() {
   const [currentIntersectionName] = useState("STREET 1 & AVENUE A");
   const [currentState] = useState(SIGNAL_STATES.STOP);
 
   return (
     <View
-      style={[styles.display, { backgroundColor: currentState.backgroundColor }]}
+      style={[
+        styles.display,
+        { backgroundColor: currentState.backgroundColor },
+      ]}
       accessibilityLabel={`Intersection ${currentIntersectionName}. ${currentState.accessibilityLabel}`}
     >
-      <div>
-        <div>
-          <Text style={[styles.intersectionName, { color: currentState.textColor }]}>
-            {currentIntersectionName}
-          </Text>
-        </div>
-        <div>
-          <Text style={[styles.status, { color: currentState.textColor }]}>
-            {currentState.icon}
-          </Text>
-        </div>
-        <div>
-          <Text style={[styles.status, { color: currentState.textColor }]}>
-            {currentState.status}
-          </Text>
-        </div>
-        <div>
-          <Text style={[styles.status, { color: currentState.textColor }]}>
-            {currentState.description}
-          </Text>
-        </div>
-      </div>
+      <View style={styles.content}>
+        <Text
+          style={[
+            styles.intersectionName,
+            { color: currentState.textColor },
+          ]}
+        >
+          {currentIntersectionName}
+        </Text>
+
+        <Text
+          style={[styles.status, { color: currentState.textColor }]}
+        >
+          {currentState.icon}
+        </Text>
+
+        <Text
+          style={[styles.status, { color: currentState.textColor }]}
+        >
+          {currentState.status}
+        </Text>
+
+        <Text
+          style={[styles.status, { color: currentState.textColor }]}
+        >
+          {currentState.description}
+        </Text>
+      </View>
     </View>
   );
 }
@@ -42,16 +52,20 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    textAlign: 'center',
-    height: '100%',
+  },
+  content: {
+    alignItems: 'center',
+    padding: 16,
   },
   intersectionName: {
     fontSize: 20,
     fontWeight: 'bold',
     marginBottom: 10,
+    textAlign: 'center',
   },
   status: {
     fontSize: 18,
     marginVertical: 5,
-  }
+    textAlign: 'center',
+  },
 });
