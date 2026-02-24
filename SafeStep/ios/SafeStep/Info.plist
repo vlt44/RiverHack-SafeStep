@@ -47,6 +47,9 @@
     </dict>
     <key>NSLocationWhenInUseUsageDescription</key>
     <string>We need access to your location to show your position on the map.</string>
+    <key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+    <string>We need continued access to provide service in the background</string>
+
 
     <key>NSUserActivityTypes</key>
     <array>
