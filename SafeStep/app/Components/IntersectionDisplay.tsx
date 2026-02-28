@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { View, Text, StyleSheet } from 'react-native';
-import { SIGNAL_STATES } from '../utils/signalStates';
+import { SIGNAL_STATES } from '../../utils/signalStates';
 
 
 export default function IntersectionDisplay() {
