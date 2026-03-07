@@ -94,9 +94,6 @@ Austin is a rapidly growing city with dense traffic and increasingly complex int
 
 <img src="./SafeStep/assets/Charts/UserFlow.png" height="1000" />
 
-**Crossing Status State**
-![Crossing Status State](./SafeStep/assets/Charts/CrossingStatusState.png)
-
 ## UI
 
 ### Color System
@@ -105,12 +102,11 @@ Austin is a rapidly growing city with dense traffic and increasingly complex int
 
 > These follow global traffic conventions and ISO / MUTCD human-factors standards.
 
-| Status      | Color Name   | Hex       | Meaning               |
-| ----------- | ------------ | --------- | --------------------- |
-| **WALK**    | Safety Green | `#2E7D32` | Safe / go             |
-| **WARNING** | Amber        | `#F9A825` | Caution / ending soon |
-| **STOP**    | Signal Red   | `#C62828` | Do not cross          |
-| **UNKNOWN** | Neutral Gray | `#616161` | Data unavailable      |
+| Status      | Color Name   | Hex       | Meaning          |
+| ----------- | ------------ | --------- | ---------------- |
+| **WALK**    | Safety Green | `#2E7D32` | Safe / go        |
+| **STOP**    | Signal Red   | `#C62828` | Do not cross     |
+| **UNKNOWN** | Neutral Gray | `#616161` | Data unavailable |
 
 **Accessibility Requirements (Critical)**
 
@@ -145,19 +141,17 @@ Austin is a rapidly growing city with dense traffic and increasingly complex int
 | -------------- | ----- | --------- |
 | Success | Green | `#2E7D32` |
 | Error | Red | `#D32F2F` |
-| Warning banner | Amber | `#F9A825` |
 | Info | Blue | `#1976D2` |
 
 **Color + Shape Redundancy**
 
 > WCAG requirement
 
-| Status  | Icon                |
-| ------- | ------------------- |
-| WALK    | ✓ or walking person |
-| WARNING | ⚠️                  |
-| STOP    | ⛔                  |
-| UNKNOWN | ?                   |
+| Status  | Icon |
+| ------- | ---- |
+| WALK    |      |
+| STOP    |      |
+| UNKNOWN |      |
 
 **Status Card**
 
@@ -165,23 +159,15 @@ Austin is a rapidly growing city with dense traffic and increasingly complex int
 
 - Background: `#2E7D32`
 - Text: `#FFFFFF`
-- Icon: ✓
+- Icon:
 - Label: **WALK**
 - Subtext: “Safe to cross”
-
-### WARNING state
-
-- Background: `#F9A825`
-- Text: `#000000`
-- Icon: ⚠️
-- Label: **WARNING**
-- Subtext: “Crossing ending soon”
 
 ### STOP state
 
 - Background: `#C62828`
 - Text: `#FFFFFF`
-- Icon: ⛔
+- Icon:
 - Label: **STOP**
 - Subtext: “Do not cross”
 
@@ -189,9 +175,22 @@ Austin is a rapidly growing city with dense traffic and increasingly complex int
 
 - Background: `#616161`
 - Text: `#FFFFFF`
-- Icon: ?
+- Icon:
 - Label: **UNKNOWN**
 - Subtext: “Data unavailable — use caution”
+
+## Testing
+
+- Crosswalk signal detection logic
+- Alert rendering
+- UI signal indicators
+- User interaction with detection controls
+- Safety edge cases
+
+Testing stack:
+
+- Jest
+- React Testing Library
 
 ## Demo
 
