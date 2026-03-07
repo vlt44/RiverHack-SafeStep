@@ -64,7 +64,7 @@ Austin is a rapidly growing city with dense traffic and increasingly complex int
 **CrossingSignalState**
 
 - `intersectionId`
-- `status` → `STOP | WALK | WARNING | UNKNOWN`
+- `status` → `STOP | WALK | UNKNOWN`
 - `effectiveAt` (timestamp)
 - `expiresAt` (optional)
 
