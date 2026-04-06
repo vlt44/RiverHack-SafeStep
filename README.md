@@ -192,8 +192,6 @@ Testing stack:
 - Jest
 - React Testing Library
 
-## Demo
-
 ## Group
 
 - Alex
