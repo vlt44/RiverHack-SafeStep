@@ -14,7 +14,7 @@ export const WALK_STATE: SignalStateConfig = {
   description: 'Safe to cross',
   backgroundColor: '#2E7D32',
   textColor: '#FFFFFF',
-  icon: '🚶',
+  icon: '',
   accessibilityLabel: 'Walk signal. Safe to cross.'
 };
 
@@ -23,7 +23,7 @@ export const STOP_STATE: SignalStateConfig = {
   description: 'Do not cross',
   backgroundColor: '#C62828',
   textColor: '#FFFFFF',
-  icon: '🛑',
+  icon: '',
   accessibilityLabel: 'Stop signal. Do not cross.'
 };
 
@@ -32,7 +32,7 @@ export const UNKNOWN_STATE: SignalStateConfig = {
   description: 'Signal unavailable',
   backgroundColor: '#616161',
   textColor: '#FFFFFF',
-  icon: '❓',
+  icon: '',
   accessibilityLabel: 'Signal unavailable. Use caution.'
 };
 
