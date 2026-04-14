@@ -179,6 +179,10 @@ Austin is a rapidly growing city with dense traffic and increasingly complex int
 - Label: **UNKNOWN**
 - Subtext: “Data unavailable — use caution”
 
+<img src="./SafeStep/assets/states/Walk.png" height="500" />
+<img src="./SafeStep/assets/states/Stop.png" height="500" />
+<img src="./SafeStep/assets/states/Unknown.png" height="500" />
+
 ## Testing
 
 - Crosswalk signal detection logic
