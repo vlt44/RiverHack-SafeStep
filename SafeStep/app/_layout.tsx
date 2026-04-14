@@ -1,12 +1,5 @@
-import { View } from 'react-native';
-import Navbar from './Components/Navbar';
-import IntersectionDisplay from './Components/IntersectionDisplay';
+import { Stack } from 'expo-router';
 
-export default function HomeScreen() {
-  return (
-    <View>
-      <Navbar/>
-      <IntersectionDisplay/>
-    </View>
-  )
+export default function RootLayout() {
+  return <Stack screenOptions={{ headerShown: false }} />;
 }
