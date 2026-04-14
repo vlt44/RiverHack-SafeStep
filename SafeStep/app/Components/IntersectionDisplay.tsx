@@ -1,11 +1,16 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { View, Text, StyleSheet } from 'react-native';
-import { SIGNAL_STATES } from '../../utils/signalStates';
+import { SIGNAL_STATES, type CrossingSignalStatus } from '../../utils/signalStates';
 
+interface IntersectionDisplayProps {
+  intersectionName?: string;
+  currentStatus?: CrossingSignalStatus | string;
+}
 
-export default function IntersectionDisplay() {
-  const [currentIntersectionName] = useState("STREET 1 & AVENUE A");
-  const [currentState] = useState(SIGNAL_STATES.STOP);
+export default function IntersectionDisplay({intersectionName = '', currentStatus = '' }: IntersectionDisplayProps) {
+  
+  const resolvedStatus: CrossingSignalStatus = currentStatus in SIGNAL_STATES ? (currentStatus as CrossingSignalStatus) : 'UNKNOWN';
+  const currentState = SIGNAL_STATES[resolvedStatus];
 
   return (
     <View
@@ -13,7 +18,7 @@ export default function IntersectionDisplay() {
         styles.display,
         { backgroundColor: currentState.backgroundColor },
       ]}
-      accessibilityLabel={`Intersection ${currentIntersectionName}. ${currentState.accessibilityLabel}`}
+      accessibilityLabel={`Intersection ${intersectionName}. ${currentState.accessibilityLabel}`}
     >
       <View style={styles.content}>
         <Text
@@ -22,7 +27,7 @@ export default function IntersectionDisplay() {
             { color: currentState.textColor },
           ]}
         >
-          {currentIntersectionName}
+          {intersectionName}
         </Text>
 
         <Text
