@@ -1,4 +1,5 @@
 module.exports = {
-  testEnvironment: "jsdom",
-  setupFilesAfterEnv: ["./jest.setup.js"],
+  preset: "jest-expo",
+  setupFilesAfterEnv: ["<rootDir>/jest.setup.js"],
+  testPathIgnorePatterns: ["/node_modules/", "/ios/", "/android/"],
 };
