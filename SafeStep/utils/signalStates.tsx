@@ -1,3 +1,8 @@
+import { ReactNode } from "react";
+import { TfiHandStop } from "react-icons/tfi";
+import { IoMdWalk } from "react-icons/io";
+import { BiSolidTrafficCone } from "react-icons/bi";
+
 export type CrossingSignalStatus = 'STOP' | 'WALK' | 'UNKNOWN';
 
 export interface SignalStateConfig {
@@ -5,7 +10,7 @@ export interface SignalStateConfig {
   description: string,
   backgroundColor: string,
   textColor: string,
-  icon: string,
+  icon: ReactNode,
   accessibilityLabel: string,
 }
 
@@ -14,7 +19,7 @@ export const WALK_STATE: SignalStateConfig = {
   description: 'Safe to cross',
   backgroundColor: '#2E7D32',
   textColor: '#FFFFFF',
-  icon: '',
+  icon: <IoMdWalk color="#FFFFFF" />,
   accessibilityLabel: 'Walk signal. Safe to cross.'
 };
 
@@ -23,16 +28,16 @@ export const STOP_STATE: SignalStateConfig = {
   description: 'Do not cross',
   backgroundColor: '#C62828',
   textColor: '#FFFFFF',
-  icon: '',
+  icon: <TfiHandStop color="#FFFFFF" />,
   accessibilityLabel: 'Stop signal. Do not cross.'
 };
 
 export const UNKNOWN_STATE: SignalStateConfig = {
   status: 'UNKNOWN',
-  description: 'Signal unavailable',
+  description: 'Use caution',
   backgroundColor: '#616161',
   textColor: '#FFFFFF',
-  icon: '',
+  icon: <BiSolidTrafficCone color="#FFFFFF" />,
   accessibilityLabel: 'Signal unavailable. Use caution.'
 };
 
