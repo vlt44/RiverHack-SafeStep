@@ -18,10 +18,22 @@ Austin is a rapidly growing city with dense traffic and increasingly complex int
 
 **Smart Infrastructure:** Enhance the safety and accessibility of Austin's public spaces and transportation systems
 
-## Technologies
+## Architecture
 
-- React Native
-- Typescript
+- React Native / TypeScript — Client application
+- Phoenix / Elixir — API and business logic
+  - REST API
+  - Phoenix Channels — real-time signal updates
+  - Phoenix PubSub — event broadcasting
+  - Ecto — database access
+  - Oban — background jobs and signal processing
+- PostgreSQL — Application data
+  - Intersections
+  - Devices
+  - Signal state
+- PostGIS — Geographic and spatial queries
+  - Nearby intersection detection
+- External Signal APIs — Traffic signal data
 
 ## System Design
 
